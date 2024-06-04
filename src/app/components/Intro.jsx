@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Intro() {
   return (
-    <div className="flex min-h-screen items-center max-w-[80vw  ] md:px-10 px-2 py-12">
+    <div className="flex min-h-screen items-center max-w-[80vw] md:px-10 px-2 py-12">
       <div className="grid grid-flow-dense grid-cols-10 gap-4">
         <Block className="col-span-10 md:col-span-6">
           <Index index={1} />
