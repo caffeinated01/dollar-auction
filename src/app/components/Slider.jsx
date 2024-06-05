@@ -10,7 +10,7 @@ export default function Slider({ word }) {
   });
 
   return (
-    <div className="overflow-hidden font-switzer">
+    <div className="overflow-hidden font-switzer bg-black text-zinc-200">
       <div ref={rowRef}>
         <Row word={word} progress={scrollYProgress} />
       </div>

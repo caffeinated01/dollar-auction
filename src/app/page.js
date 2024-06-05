@@ -1,9 +1,10 @@
 "use client";
 import { useEffect } from "react";
 import Lenis from "lenis";
-import Hero from "./components/Hero";
 import Slider from "./components/Slider";
-import Intro from "./components/Intro";
+import Hero from "./components/Hero";
+import Intro from "./views/Intro";
+import Game from "./views/Game";
 
 export default function Home() {
   useEffect(() => {
@@ -23,10 +24,8 @@ export default function Home() {
       <Hero />
       <Slider word={"INTRO"} />
       <Intro />
-      {/* <h1 className="text-3xl">
-        Idea is to have how the game plays out as a text message displayed on a
-        phone of some sort
-      </h1> */}
+      <Slider word={"GAME"} />
+      <Game />
     </main>
   );
 }
