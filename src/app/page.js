@@ -26,6 +26,7 @@ export default function Home() {
       <Intro />
       <Slider word={"GAME"} />
       <Game />
+      <Slider word={"?"} />
     </main>
   );
 }
