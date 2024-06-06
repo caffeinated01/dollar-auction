@@ -53,7 +53,7 @@ export default function End() {
       </div>
       <div className="flex h-screen items-center justify-center">
         <h1 className="text-xl">
-          It's difficult to make a choice when the rational one is not always
+          It&apos;s difficult to make a choice when the rational one is not always
           crystal clear, which leads to a situation where rational decisions
           perpetuate irrational outcomes. Each player starts with making
           rational decisions. But as the game went on, they fell into an
