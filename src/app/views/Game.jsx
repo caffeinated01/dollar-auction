@@ -162,7 +162,7 @@ export default function Game() {
     ],
     [
       {
-        body: "And I lost $1.30 after getting the $100.",
+        body: "And I lost $1.30 after getting the $1.00.",
         character: "bidder",
         align: "right",
       },
