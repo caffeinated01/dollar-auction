@@ -9,120 +9,121 @@ import { flushSync } from "react-dom";
 export default function Game() {
   const junctions = [
     [
-      { body: "Sure, $10.", character: "you" },
-      { body: "I'll go $20.", character: "bidder", align: "right" },
+      { body: "$0.15.", character: "you" },
+      { body: "$0.20.", character: "bidder", align: "right" },
       {
-        body: "We have $20. How about $30?",
+        body: "$0.20! Do I hear $0.25?",
         character: "auctioneer",
         align: "right",
       },
     ],
     [
-      { body: "$30.", character: "you" },
-      { body: "$40.", character: "bidder", align: "right" },
+      { body: "$0.25.", character: "you" },
+      { body: "$0.30.", character: "bidder", align: "right" },
       {
-        body: "$40! Do I hear $50?",
+        body: "$0.30! How about $0.40?",
         character: "auctioneer",
         align: "right",
       },
     ],
     [
-      { body: "$50.", character: "you" },
-      { body: "$60.", character: "bidder", align: "right" },
+      { body: "$0.40.", character: "you" },
+      { body: "$0.50.", character: "bidder", align: "right" },
       {
-        body: "$60! Can I get $70?",
+        body: "$0.50! How about $0.60?",
         character: "auctioneer",
         align: "right",
       },
     ],
     [
-      { body: "$70.", character: "you" },
-      { body: "$80.", character: "bidder", align: "right" },
+      { body: "$0.60.", character: "you" },
+      { body: "$0.70.", character: "bidder", align: "right" },
       {
-        body: "$80 for a hundred-dollar bill! Who bids $90?",
+        body: "$0.70! How about $0.80?",
         character: "auctioneer",
         align: "right",
       },
     ],
     [
-      { body: "$90.", character: "you" },
-      { body: "$100.", character: "bidder", align: "right" },
+      { body: "$0.80.", character: "you" },
+      { body: "$0.90.", character: "bidder", align: "right" },
       {
-        body: "We have $100! Remember, both the highest and second-highest bidders must pay their final bids. Anyone for $110?",
+        body: "$0.90! Do I hear $1.00?",
+        character: "auctioneer",
+        align: "right",
+      },
+    ],
+    [
+      { body: "$1.00.", character: "you" },
+      { body: "$1.10.", character: "bidder", align: "right" },
+      {
+        body: "We have $1.10! Remember, both the highest and second-highest bidders must pay their final bids. Anyone for $1.20?",
         character: "auctioneer",
         align: "right",
       },
     ],
     [
       {
-        body: "Wait, if I stop now, I lose $90. I'll bid $110.",
+        body: "Wait, if I stop now, I lose $1.00. I'll bid $1.20.",
         character: "you",
       },
-
       {
-        body: "You are making a rational decision to avoid losing your previous bid of $90 by bidding more, thinking you can still get a better outcome.",
+        body: "You are making a rational decision to avoid losing your previous bid of $1.00 by bidding more, thinking you can still get a better outcome.",
         character: "narrator",
         align: "right",
       },
     ],
     [
       {
-        body: "I can't lose $100. I bid $120.",
+        body: "I can't lose $1.10. I bid $1.30.",
         character: "bidder",
         align: "right",
       },
-
       {
-        body: "The bidder is also making a rational decision to avoid losing their $100 bid, escalating the commitment to minimize losses.",
+        body: "The bidder is also making a rational decision to avoid losing their $1.10 bid, escalating the commitment to minimise losses.",
         character: "narrator",
         align: "right",
       },
     ],
     [
-      { body: "$130.", character: "you" },
+      { body: "$1.40.", character: "you" },
       {
-        body: "Your rational decision is driven by the desire to avoid the sunk cost of $110, further escalating the bids.",
+        body: "Your rational decision is driven by the desire to avoid the sunk cost of $1.20, further escalating the bids.",
         character: "narrator",
         align: "right",
       },
     ],
     [
-      { body: "$140.", character: "bidder", align: "right" },
-      { body: "$150.", character: "you" },
-    ],
-    [
+      { body: "$1.50.", character: "bidder", align: "right" },
+      { body: "$1.60.", character: "you" },
       {
-        body: "The cycle of rational decisions continues, with each bid attempting to minimize loss.",
+        body: "The cycle of rational decisions continues, with each bid attempting to minimise loss.",
         character: "narrator",
         align: "right",
       },
     ],
     [
-      { body: "$160.", character: "bidder", align: "right" },
+      { body: "$1.70.", character: "bidder", align: "right" },
       {
-        body: "$160! Going once, going twice…",
+        body: "$1.70! Going once, going twice…",
         character: "auctioneer",
         align: "right",
       },
-    ],
-    [{ body: "$170.", character: "you" }],
-    [
+      { body: "$1.80.", character: "you" },
       {
-        body: "Both bidders are now deeply committed, each new bid aimed at minimizing a perceived loss.",
+        body: "Both bidders are now deeply committed, each new bid aimed at minimising a perceived loss.",
         character: "narrator",
         align: "right",
       },
     ],
     [
-      { body: "$180.", character: "bidder", align: "right" },
+      { body: "$1.90.", character: "bidder", align: "right" },
       {
-        body: "$180! Will you go $190?",
+        body: "$1.90! Will you go $2.00?",
         character: "auctioneer",
         align: "right",
       },
-    ],
-    [
-      { body: "$190.", character: "you" },
+      { body: "$2.00.", character: "you" },
       {
         body: "The escalation of commitment keeps driving the bids higher, well beyond the value of the hundred-dollar bill.",
         character: "narrator",
@@ -130,34 +131,38 @@ export default function Game() {
       },
     ],
     [
-      { body: "$200.", character: "bidder", align: "right" },
+      { body: "$2.10.", character: "bidder", align: "right" },
       {
-        body: "$200! Any higher?",
+        body: "$2.10! Any higher?",
+        character: "auctioneer",
+        align: "right",
+      },
+      { body: "I bid $2.20.", character: "you" },
+      {
+        body: "Each bidder is now trapped in a cycle where stopping means a significant loss, thus rational decisions perpetuate irrational outcomes.",
+        character: "narrator",
+        align: "right",
+      },
+    ],
+    [
+      { body: "$2.30.", character: "bidder", align: "right" },
+      {
+        body: "$2.30! Going once, going twice, sold to bidder for $2.30. Congratulations! You win the hundred-dollar bill.",
         character: "auctioneer",
         align: "right",
       },
     ],
     [
-      { body: "I bid $210.", character: "you" },
+      { body: "Damn! I lost $2.20.", character: "you" },
       {
-        body: "Each bidder is now trapped in a cycle where stopping means a significant loss, thus rational decisions perpetuate irrational outcomes.",
+        body: "Despite rational attempts to minimise losses, you end up losing a substantial amount.",
         character: "narrator",
         align: "right",
-      },],[
-      { body: "$220.", character: "bidder", align: "right" },
+      },
+    ],
+    [
       {
-        body: "$220! Going once, going twice, sold to bidder for $240. Congratulations! You win the hundred-dollar bill.",
-        character: "auctioneer",
-        align: "right",
-      },],[
-      { body: "Damn! I lost $210.", character: "you" },
-      {
-        body: "Despite rational attempts to minimize losses, you end up losing a substantial amount.",
-        character: "narrator",
-        align: "right",
-      },],[
-      {
-        body: "And I lost $120 after getting the $100.",
+        body: "And I lost $1.30 after getting the $100.",
         character: "bidder",
         align: "right",
       },
@@ -177,14 +182,14 @@ export default function Game() {
 
   const [conversation, setConversation] = useState([
     {
-      body: "Welcome to our exciting dollar auction! Today, we're auctioning off a crisp hundred-dollar bill. The starting bid is just $1. Who wants to start?",
+      body: "Welcome to our exciting dollar auction! Today, we're auctioning off a crisp dollar bill. Who wants to start?",
       character: "auctioneer",
       align: "right",
     },
-    { body: "I'll start with $1.", character: "you" },
-    { body: "I bid $5.", character: "bidder", align: "right" },
+    { body: "I'll start with $0.05.", character: "you" },
+    { body: "I bid $0.10.", character: "bidder", align: "right" },
     {
-      body: "Great! We have $5. Can I get $10?",
+      body: "We have $0.10. How about $0.15?",
       character: "auctioneer",
       align: "right",
     },
@@ -202,7 +207,7 @@ export default function Game() {
       buttonRef.current.scrollIntoView({
         top: 50,
         behavior: "smooth",
-        block: "start",
+        block: "end",
         inline: "nearest",
       });
     }
@@ -212,7 +217,7 @@ export default function Game() {
   }
 
   return (
-    <div className="flex flex-col gap-10 items-center mt-24 p-5 border-2 rounded-2xl">
+    <div className="flex flex-col gap-10 items-center my-40 p-5 border-2 rounded-2xl">
       <ul className="flex flex-col w-[90vw] md:w-[50vw]">
         {conversation.map((text, idx) => (
           <Text
@@ -225,13 +230,35 @@ export default function Game() {
         ))}
       </ul>
       {showButton ? (
-        <button
+        <motion.button
           ref={buttonRef}
           onClick={handleConversation}
-          className="rounded-md py-2 px-14 border border-zinc-200 bg-black text-zinc-200"
+          whileHover={{
+            scale: "1.2",
+          }}
+          style={{ scale: "1", rotate: 0 }}
+          transition={{ delay: 0.02 }}
+          className="rounded-md py-2 px-4 border border-zinc-200 bg-black text-zinc-200"
         >
-          <span className="font-switzer">NEXT</span>
-        </button>
+          <span className="font-switzer flex items-center">
+            NEXT
+            <svg
+              fill="none"
+              height="22"
+              width="22"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.75 8.75L14.25 12L10.75 15.25"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+              />
+            </svg>
+          </span>
+        </motion.button>
       ) : (
         <div ref={buttonRef}></div>
       )}
@@ -260,26 +287,25 @@ function Text({ body, character, avatar, align }) {
           className="max-w-14 aspect-square rounded-full border border-zinc-100"
         />
       </div>
-      <motion.div
-        whileHover={{
-          scale: "1.2",
-          zIndex: "20",
-          translateX: align === "right" ? -30 : 30,
-          translateY: -20,
-        }}
-        style={{ scale: "1", rotate: 0 }}
-        transition={{ delay: 0.02 }}
-        className="bg-white rounded-lg p-5 max-w-[600px] shadow-md"
-      >
+      <div className="bg-white rounded-lg p-5 max-w-[600px] shadow-md">
         <p className="text-xl md:text-2xl">{body}</p>
-      </motion.div>
+      </div>
     </div>
   ) : (
-    <div className="w-full bg-black text-zinc-200 min-h-20 rounded-md p-5">
+    <motion.div
+      whileHover={{
+        scale: "1.1",
+        translateY: -20,
+        zIndex: "20",
+      }}
+      style={{ scale: "1", rotate: 0 }}
+      transition={{ delay: 0.02 }}
+      className="w-full bg-black text-zinc-200 min-h-20 rounded-md p-5"
+    >
       <div className="flex items-center justify-center size-5 rounded-full border my-2">
         i
       </div>
       <p className="text-2xl">{body}</p>
-    </div>
+    </motion.div>
   );
 }

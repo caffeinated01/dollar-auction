@@ -5,6 +5,8 @@ import Slider from "./components/Slider";
 import Hero from "./components/Hero";
 import Intro from "./views/Intro";
 import Game from "./views/Game";
+import End from "./views/End";
+import Footer from "./components/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -26,7 +28,9 @@ export default function Home() {
       <Intro />
       <Slider word={"GAME"} />
       <Game />
-      <Slider word={"?"} />
+      <Slider word={"WHAT?"} />
+      <End />
+      <Footer />
     </main>
   );
 }
