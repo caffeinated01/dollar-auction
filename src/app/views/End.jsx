@@ -17,6 +17,7 @@ export default function End() {
         >
           {new Array(3).fill(null).map((_, i) => (
             <motion.div
+              key={i}
               variants={{
                 offscreen: {
                   y: 100,
