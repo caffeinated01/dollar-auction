@@ -10,35 +10,6 @@ export default function End() {
           The main difficulty in Dollar Auction is that the line between a
           rational decision and irrational decision gets muddy.
         </h1>
-        <motion.div
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.6 }}
-        >
-          {new Array(3).fill(null).map((_, i) => (
-            <motion.div
-              key={i}
-              variants={{
-                offscreen: {
-                  y: 100,
-                },
-                onscreen: {
-                  y: 0,
-                },
-              }}
-              transition={{ delay: 0.2 * i }}
-            >
-              <Image
-                src={OneBill}
-                className={`max-w-[300px] -translate-y-${20 * i} scale-${(
-                  100 +
-                  i * 5
-                ).toString()}`}
-                alt={`Dollar Bill ${i + 1}`}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
       <div className="flex flex-col md:flex-row h-screen items-center justify-center gap-10">
         <div className="p-5 md:w-[30vw] flex flex-col md:items-end">
@@ -53,10 +24,10 @@ export default function End() {
       </div>
       <div className="flex h-screen items-center justify-center">
         <h1 className="text-xl">
-          It&apos;s difficult to make a choice when the rational one is not always
-          crystal clear, which leads to a situation where rational decisions
-          perpetuate irrational outcomes. Each player starts with making
-          rational decisions. But as the game went on, they fell into an
+          It&apos;s difficult to make a choice when the rational one is not
+          always crystal clear, which leads to a situation where rational
+          decisions perpetuate irrational outcomes. Each player starts with
+          making rational decisions. But as the game went on, they fell into an
           escalation trap, and it progressively gets harder and harder to quit.
         </h1>
         <motion.div
@@ -115,6 +86,37 @@ export default function End() {
             might end up with a loss.
           </h1>
         </div>
+      </div>
+      <div>
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.6 }}
+        >
+          {new Array(3).fill(null).map((_, i) => (
+            <motion.div
+              key={i}
+              variants={{
+                offscreen: {
+                  y: 100,
+                },
+                onscreen: {
+                  y: 0,
+                },
+              }}
+              transition={{ delay: 0.2 * i }}
+              className="flex justify-center"
+            >
+              <Image
+                src={OneBill}
+                className={`max-w-[${300 + i * 10}px] -translate-y-[${
+                  20 * i
+                }px] shadow-lg`}
+                alt={`Dollar Bill ${i + 1}`}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
