@@ -101,7 +101,8 @@ export default function End() {
                   y: 100,
                 },
                 onscreen: {
-                  y: 0,
+                  y: -40 * i,
+                  scale: 1 + 0.1 *i,
                 },
               }}
               transition={{ delay: 0.2 * i }}
@@ -109,9 +110,7 @@ export default function End() {
             >
               <Image
                 src={OneBill}
-                className={`max-w-[${300 + i * 10}px] -translate-y-[${
-                  20 * i
-                }px] shadow-lg`}
+                className={`max-w-[300px] shadow-lg`}
                 alt={`Dollar Bill ${i + 1}`}
               />
             </motion.div>
