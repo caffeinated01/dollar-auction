@@ -19,7 +19,7 @@ export default function End() {
         <div className="relative top-50 md:left-50 w-[90vw] md:h-[90vh] md:w-0 border border-black border-dashed" />
         <div className="p-5 md:w-[30vw]">
           <h1 className="text-2xl">Rational</h1>
-          <p>However, to continue bidding to minimize losses is rational</p>
+          <p>However, to continue bidding to minimise losses is rational</p>
         </div>
       </div>
       <div className="flex h-screen items-center justify-center">
@@ -102,7 +102,7 @@ export default function End() {
                 },
                 onscreen: {
                   y: -40 * i,
-                  scale: 1 + 0.1 *i,
+                  scale: 1 + 0.1 * i,
                 },
               }}
               transition={{ delay: 0.2 * i }}
