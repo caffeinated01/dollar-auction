@@ -125,7 +125,7 @@ export default function Game() {
       },
       { body: "$2.00.", character: "you" },
       {
-        body: "The escalation of commitment keeps driving the bids higher, well beyond the value of the hundred-dollar bill.",
+        body: "The escalation of commitment keeps driving the bids higher, well beyond the value of the dollar bill.",
         character: "narrator",
         align: "right",
       },
@@ -147,7 +147,7 @@ export default function Game() {
     [
       { body: "$2.30.", character: "bidder", align: "right" },
       {
-        body: "$2.30! Going once, going twice, sold to bidder for $2.30. Congratulations! You win the hundred-dollar bill.",
+        body: "$2.30! Going once, going twice, sold to bidder for $2.30. Congratulations! You win the dollar bill.",
         character: "auctioneer",
         align: "right",
       },
